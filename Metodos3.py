@@ -1,11 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Datos conocidos (puntos x, y)
-x_datos = np.array([3, 4, 5, 6])  # Suponiendo que tienes puntos en x
-y_datos = np.array([1, 3, 8, 5])  # Suponiendo que tienes puntos en y
+x_datos = np.array([3, 4, 5, 6])  
+y_datos = np.array([1, 3, 8, 5])  
 
-# Implementación del algoritmo de interpolación de Newton
+"""
+Utilice un código de programación de Python para realizar los ejercicios b, c, d, e. 
+Como resultado coloque el código, si no se ve bien, se puede colocar como imagen. Además, 
+
+Ejercicio D
+
+"""
+
 def interpolacion_newton(x, y):
     n = len(x)
     coeficientes = np.zeros(n)
@@ -15,10 +21,8 @@ def interpolacion_newton(x, y):
     coeficientes = y
     return coeficientes
 
-# Coeficientes del polinomio de interpolación
 coeficientes = interpolacion_newton(x_datos, y_datos)
 
-# Función del polinomio de interpolación de Newton de tercer grado
 def polinomio_interpolacion(coeficientes, x):
     n = len(coeficientes)
     resultado = coeficientes[0]
@@ -29,19 +33,15 @@ def polinomio_interpolacion(coeficientes, x):
         resultado += producto
     return resultado
 
-# Puntos para la estimación
 x_estimado = 3.3
 y_estimado = polinomio_interpolacion(coeficientes, x_estimado)
 
-# Imprimir el resultado estimado
 print("Estimación para x = 3.3:", y_estimado)
 
-# Cálculo del error relativo (si se conoce el valor real)
-valor_real = 2.05  # Valor real (hipotético) para x = 3.3
+valor_real = 2.05  
 error_relativo = abs((y_estimado - valor_real) / valor_real) * 100
 print("Error relativo:", error_relativo, "%")
 
-# Graficar el polinomio de interpolación y los puntos de datos
 x_valores = np.linspace(min(x_datos), max(x_datos), 100)
 y_valores = polinomio_interpolacion(coeficientes, x_valores)
 
