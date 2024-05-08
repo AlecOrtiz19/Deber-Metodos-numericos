@@ -5,6 +5,13 @@ import matplotlib.pyplot as plt
 x_datos = np.array([3, 4, 5])  
 y_datos = np.array([1, 3, 8]) 
 
+"""
+Utilice un código de programación de Python para realizar los ejercicios b, c, d, e. 
+Como resultado coloque el código, si no se ve bien, se puede colocar como imagen. Además, 
+
+Ejercicio B
+
+"""
 
 def interpolacion_newton(x, y):
     n = len(x)
