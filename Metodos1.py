@@ -1,9 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-x_datos = np.array([3, 4, 5])  
-y_datos = np.array([1, 3, 8]) 
+x_datos = np.array([2,3,4,5])  
+y_datos = np.array([1.20, 1.90, 2.40, 2.79])  
 
 """
 Utilice un código de programación de Python para realizar los ejercicios b, c, d, e. 
@@ -22,9 +21,7 @@ def interpolacion_newton(x, y):
     coeficientes = y
     return coeficientes
 
-
 coeficientes = interpolacion_newton(x_datos, y_datos)
-
 
 def polinomio_interpolacion(coeficientes, x):
     n = len(coeficientes)
@@ -36,12 +33,10 @@ def polinomio_interpolacion(coeficientes, x):
         resultado += producto
     return resultado
 
-
 x_estimado = 3.3
 y_estimado = polinomio_interpolacion(coeficientes, x_estimado)
 
-
-print("Estimación para x = 3.3:", y_estimado)
+print("Estimación para x = 3.3:",round(y_estimado, 2))
 
 
 valor_real = 2.05  
