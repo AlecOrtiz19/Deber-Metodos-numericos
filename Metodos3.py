@@ -1,8 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x_datos = np.array([3, 4, 5, 6])  
-y_datos = np.array([1, 3, 8, 5])  
+
+x_datos = np.array([2,3, 4, 5])  
+y_datos = np.array([1.20, 1.90, 2.40, 2.79])  
 
 """
 Utilice un código de programación de Python para realizar los ejercicios b, c, d, e. 
