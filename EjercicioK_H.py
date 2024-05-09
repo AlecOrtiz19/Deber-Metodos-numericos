@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-x_datos = np.array([1, 2, 3, 4, 5])  
-y_datos = np.array([1, 8, 27, 64, 125])  
+x_datos = np.array([2, 3, 4, 5])  
+y_datos = np.array([1.20, 1.90, 2.40, 2.79])  
 
 """
 
