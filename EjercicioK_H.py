@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib.pyplot as plt
+
 
 x_datos = np.array([1, 2, 3, 4, 5])  
 y_datos = np.array([1, 8, 27, 64, 125])  
@@ -38,3 +40,11 @@ f_x_real = np.interp(x_estimado, y_datos, x_datos)
 error_relativo = abs((f_x_real - valor_deseado) / valor_deseado) * 100
 print("Error relativo:", error_relativo, "%")
 
+plt.plot(x_datos, y_datos, 'bo-', label='Datos originales')
+plt.plot(x_estimado, valor_deseado, 'ro', label='Interpolación')
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.title('Interpolación Inversa de Lagrange de Tercer Grado')
+plt.legend()
+plt.grid(True)
+plt.show()
